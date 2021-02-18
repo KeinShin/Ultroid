@@ -1,35 +1,29 @@
-Project description
-Ultroid - UserBot
-A stable pluggable Telegram userbot, based on Telethon.
+            # py-Ultroid Library
+A stable userbot base library, based on Telethon.
 
-Python Version Stars Forks Contributors License Size
+## Installation
+`pip install py-Ultroid`
 
-More Info
-Deploy
-Heroku
-Local Machine
-Deploy to Heroku
-Get your API_ID and API_HASH from here and click the below button!
+## Usage
+=> Create folders named `plugins`, `addons`, `assistant` and `resources`.<br/>
+=> Add your plugins in the `plugins` folder and others accordingly.<br/>
+=> Create a `.env` file with `API_ID`, `API_HASH`, `SESSION`, 
+`BOT_TOKEN`, `BOT_USERNAME`, `REDIS_URI`, `REDIS_PASSWORD` & 
+`LOG_CHANNEL` as mandatory environment variables. Check
+[`.env.sample`](https://github.com/TeamUltroid/Ultroid/.env.sample) for more details.<br/>
+=> Run `python -m pyUltroid` to start the bot.<br/>
 
-Deploy
-Deploy Locally
-Get your API_ID and API_HASH from here
-Clone the repository:
-git clone https://github.com/TeamUltroid/Ultroid.git
-Go to the cloned folder:
-cd Ultroid
-Create a virtual env:
-virtualenv -p /usr/bin/python3 venv
-. ./venv/bin/activate
-Install the requirements:
-pip install -r requirements.txt
-Generate your SESSION:
-bash sessiongen
-Fill your details in a .env file, as given in .env.sample.
-(You can either edit and rename the file or make a new file.)
-Run the bot:
-python3 -m ultroid
-Made with 💕 by @TeamUltroid.
+### Creating plugins
+```python
+@ultroid_cmd(pattern="start$")   
+async def _(e):   
+    await e.reply("Ultroid Started")   
+```
 
-Credits
-Lonami for Telethon
+Made with 💕 by [@TeamUltroid](https://t.me/TeamUltroid). <br />
+
+# Credits
+* [Lonami](https://github.com/LonamiWebs/) for [Telethon](https://github.com/LonamiWebs/Telethon)
+
+
+
